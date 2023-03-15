@@ -1,0 +1,13 @@
+<%= form_for @conn, "/sign_up", fn f -> %>
+  <%= email_input f, :email, placeholder: "email" %>
+  <%= password_input f, :password, placeholder: "password"  %>
+  <%= number_input f, :age, placeholder: "age" %>
+  <div><p>date of birth</p>
+  <%= date_input f, :birthdate %>
+  </div>
+  <div>
+  <p>Terms and Conditions</p>
+  <%= checkbox f, :terms_and_conditions %>
+  </div>
+  <%= submit "Create User" %>
+<% end %>
